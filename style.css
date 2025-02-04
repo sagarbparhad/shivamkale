@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&family=Parisienne&display=swap');
+
+body {
+    margin: 0;
+    padding: 10px;
+    background-image: url('https://source.unsplash.com/1600x900/?wedding,flowers');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Parisienne', cursive;
+    background-color: rgb(0, 0, 39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 50px;
+    text-align: center;
+}
+
+.container-class {
+    padding-top: 1550px;
+    text-align: center;
+    width: 80%;
+}
+
+/* ✨ Gold Effect for Headings */
+h1{
+    font-size: 38px;
+    padding-top: 20px;
+    font-weight: bold;
+    background: linear-gradient(180deg, #FFD700, #FFC107, #DAA520);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.7);
+    animation: shimmer 2s infinite linear alternate;
+}
+h1, .expressive-text, .message {
+    color: rgb(246, 210, 7);
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.6);
+
+}
+
+/* message{
+    background: linear-gradient(180deg, #FFD700, #FFC107, #DAA520);
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.7);
+    animation: shimmer 2s infinite linear alternate;
+    font-weight: bold;
+} */
+
+
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.couple-name {
+    font-family: 'Great Vibes', cursive;
+    color: black;
+    font-size: 45px;
+    margin-top: 10px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes shimmer {
+    0% {
+        text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
+    }
+    100% {
+        text-shadow: 2px 2px 20px rgba(255, 215, 0, 1);
+    }
+}
+
+/* ✨ Expressive Quote */
+.expressive-text {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(246, 210, 7);
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.6);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ✨ Date & Venue */
+.date, .venue {
+    font-size: 18px;
+    color: #8B8000;
+    font-weight: bold;
+}
+
+/* ✨ Pre-Wedding Photo Styling */
+.photo-gallery-inv {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.photo-gallery-inv img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.photo-gallery-inv img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ✨ Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* .photo-gallery {
+    animation: slide-images 15s infinite linear;
+}
+
+@keyframes slide-images {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+} */
+
+.photo-gallery{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.photo-gallery img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+.extra-photo-gallery img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.extra-photo-gallery{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+
+.photo-gallery img:hover, .extra-photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+.image-caption {
+    font-size: 22px;
+    color: rgb(246, 210, 7);
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.6);
+    margin-top: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.image-caption-extra {
+    font-size: 22px;
+    color: rgb(246, 210, 7);
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.6);
+    margin-top: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.double-extra-photo-gallery {
+    position: relative;
+    /* width: 100%; */
+    overflow: hidden;  /* Hide images that are not in the view */
+}
+
+.image-container-extra {
+    /* padding-left: 800px; */
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.image-container-extra img {
+    padding: 10px;
+    width: 300px;  /* Equal width for all images */
+    height: 350px; /* Equal height for all images */
+    object-fit: cover; /* Ensures the images fill the container without distortion */
+    margin-right: 10px;
+    border-radius: 8px; /* Optional: Add some rounded corners to images */
+    transition: transform 0.5s ease;
+      /* Make images less prominent initially */
+}
+
+.image-container-extra img.highlighted {
+    transform: scale(1.15);  /* Slight zoom effect to highlight */ /* Make it fully visible */
+    /* box-shadow: 0 4px 15px rgba(255, 215, 0, 0.7); */
+    z-index: 10;  /* Ensure it stays above the other images */
+}
+
+/* To ensure smooth sliding effect */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
