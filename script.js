@@ -1,32 +1,29 @@
 let currentIndex = 0;
-const imageContainer = document.querySelector('.image-container-extra');
 const images = document.querySelectorAll('.image-container-extra img');
+const totalImages = images.length;
+const container = document.querySelector('.image-container-extra');
 
 function getImageWidth() {
-    return images[0].clientWidth + 10; // Adjust dynamically for margin/padding
+    return images[0].offsetWidth + 15; // Dynamic width detection
 }
 
 function slideImages() {
-    // Remove highlight from the previous image
-    images[currentIndex].classList.remove('highlighted');
+    images[currentIndex].classList.remove('highlighted'); // Remove highlight
 
-    // Move to the next image
-    currentIndex = (currentIndex + 1) % images.length;
+    currentIndex = (currentIndex + 1) % totalImages;
     const offset = -currentIndex * getImageWidth();
 
-    // Apply smooth sliding effect
-    imageContainer.style.transition = "transform 0.5s ease-in-out";
-    imageContainer.style.transform = `translateX(${offset}px)`;
+    container.style.transition = "transform 0.5s ease-in-out";
+    container.style.transform = `translateX(${offset}px)`;
 
-    // Add highlight effect to new image
-    images[currentIndex].classList.add('highlighted');
+    images[currentIndex].classList.add('highlighted'); // Highlight new image
 }
 
 // Auto-slide every 3 seconds
 setInterval(slideImages, 3000);
 
-// Handle screen resizing
+// Adjust slider on window resize
 window.addEventListener("resize", () => {
-    imageContainer.style.transition = "none"; // Prevent jump on resize
-    imageContainer.style.transform = `translateX(-${currentIndex * getImageWidth()}px)`;
+    container.style.transition = "none"; // Prevent jump on resize
+    container.style.transform = `translateX(-${currentIndex * getImageWidth()}px)`;
 });
