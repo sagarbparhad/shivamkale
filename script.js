@@ -1,29 +1,20 @@
+// Set the time interval for image sliding
 let currentIndex = 0;
 const images = document.querySelectorAll('.image-container-extra img');
 const totalImages = images.length;
-const container = document.querySelector('.image-container-extra');
-
-function getImageWidth() {
-    return images[0].offsetWidth + 15; // Dynamic width detection
-}
 
 function slideImages() {
-    images[currentIndex].classList.remove('highlighted'); // Remove highlight
+    // Remove the highlighted class from the previous image
+    images[currentIndex].classList.remove('highlighted');
 
-    currentIndex = (currentIndex + 1) % totalImages;
-    const offset = -currentIndex * getImageWidth();
+    // Move the container to the next image
+    currentIndex = (currentIndex + 1) % totalImages; // Loop back to first image
+    const offset = -currentIndex * 220;  // Adjust the value based on image width + margin
+    document.querySelector('.image-container-extra').style.transform = `translateX(${offset}px)`;
 
-    container.style.transition = "transform 0.5s ease-in-out";
-    container.style.transform = `translateX(${offset}px)`;
-
-    images[currentIndex].classList.add('highlighted'); // Highlight new image
+    // Add the highlighted class to the new front image
+    images[currentIndex].classList.add('highlighted');
 }
 
-// Auto-slide every 3 seconds
-setInterval(slideImages, 3000);
-
-// Adjust slider on window resize
-window.addEventListener("resize", () => {
-    container.style.transition = "none"; // Prevent jump on resize
-    container.style.transform = `translateX(-${currentIndex * getImageWidth()}px)`;
-});
+// Set an interval to swipe images every 3 seconds
+setInterval(slideImages, 3000);  // Change 3000 to control the speed
