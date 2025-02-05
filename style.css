@@ -191,55 +191,28 @@ h1 {
     overflow: hidden;  /* Hide images that are not in the view */
 }
 
-/* .image-container-extra {
-    
+.image-container-extra {
+    /* padding-left: 800px; */
     display: flex;
     transition: transform 1s ease-in-out;
 }
 
 .image-container-extra img {
     padding: 10px;
-    width: 300px;  
-    height: 350px; 
-    object-fit: cover; 
+    width: 300px;  /* Equal width for all images */
+    height: 350px; /* Equal height for all images */
+    object-fit: cover; /* Ensures the images fill the container without distortion */
     margin-right: 10px;
-    border-radius: 8px; 
+    border-radius: 8px; /* Optional: Add some rounded corners to images */
     transition: transform 0.5s ease;
+      /* Make images less prominent initially */
 }
 
 .image-container-extra img.highlighted {
-    transform: scale(1.15);  
-    z-index: 10;
-} */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    transform: scale(1.15);  /* Slight zoom effect to highlight */ /* Make it fully visible */
+    /* box-shadow: 0 4px 15px rgba(255, 215, 0, 0.7); */
+    z-index: 10;  /* Ensure it stays above the other images */
 }
-
-.image-container-extra {
-    display: flex;
-    gap: 15px; /* Space between images */
-    transition: transform 0.5s ease-in-out;
-    overflow: hidden;
-    width: 100%;
-}
-
-.image-container-extra img {
-    width: 80vw; /* Adjust dynamically based on screen width */
-    max-width: 400px; /* Prevents images from being too big */
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-/* Highlight effect */
-.highlighted {
-    border: 3px solid #ff6600;
-    transition: border 0.3s ease-in-out;
-}
-
 
 /* To ensure smooth sliding effect */
 @keyframes slide {
