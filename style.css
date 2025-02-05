@@ -191,11 +191,6 @@ h1 {
     overflow: hidden;  /* Hide images that are not in the view */
 }
 
-.image-container-extra {
-    /* padding-left: 800px; */
-    display: flex;
-    transition: transform 1s ease-in-out;
-}
 
 .image-container-extra img {
     padding: 10px;
@@ -213,6 +208,26 @@ h1 {
     /* box-shadow: 0 4px 15px rgba(255, 215, 0, 0.7); */
     z-index: 10;  /* Ensure it stays above the other images */
 }
+
+.image-slider-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.image-container-extra {
+    display: flex;
+    gap: 10px; /* Adjust spacing between images */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Highlight effect */
+.highlighted {
+    border: 3px solid #ff6600; /* Example highlight */
+    transition: border 0.3s ease-in-out;
+}
+
 
 /* To ensure smooth sliding effect */
 @keyframes slide {
