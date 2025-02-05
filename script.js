@@ -10,7 +10,7 @@ function slideImages() {
     // Move the container to the next image
     currentIndex = (currentIndex + 1) % totalImages; // Loop back to first image
     const offset = -currentIndex * 220;  // Adjust the value based on image width + margin
-    document.querySelector('.image-container-extra').style.transform = `translateX(${offset}px)`;
+    document.querySelector('.image-container-extra').style.transform = translateX(${offset}px);
 
     // Add the highlighted class to the new front image
     images[currentIndex].classList.add('highlighted');
