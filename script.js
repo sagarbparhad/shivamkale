@@ -1,20 +1,32 @@
-// Set the time interval for image sliding
 let currentIndex = 0;
+const imageContainer = document.querySelector('.image-container-extra');
 const images = document.querySelectorAll('.image-container-extra img');
-const totalImages = images.length;
+
+function getImageWidth() {
+    return images[0].clientWidth + 10; // Adjust dynamically for margin/padding
+}
 
 function slideImages() {
-    // Remove the highlighted class from the previous image
+    // Remove highlight from the previous image
     images[currentIndex].classList.remove('highlighted');
 
-    // Move the container to the next image
-    currentIndex = (currentIndex + 1) % totalImages; // Loop back to first image
-    const offset = -currentIndex * 220;  // Adjust the value based on image width + margin
-    document.querySelector('.image-container-extra').style.transform = `translateX(${offset}px)`;
+    // Move to the next image
+    currentIndex = (currentIndex + 1) % images.length;
+    const offset = -currentIndex * getImageWidth();
 
-    // Add the highlighted class to the new front image
+    // Apply smooth sliding effect
+    imageContainer.style.transition = "transform 0.5s ease-in-out";
+    imageContainer.style.transform = `translateX(${offset}px)`;
+
+    // Add highlight effect to new image
     images[currentIndex].classList.add('highlighted');
 }
 
-// Set an interval to swipe images every 3 seconds
-setInterval(slideImages, 3000);  // Change 3000 to control the speed
+// Auto-slide every 3 seconds
+setInterval(slideImages, 3000);
+
+// Handle screen resizing
+window.addEventListener("resize", () => {
+    imageContainer.style.transition = "none"; // Prevent jump on resize
+    imageContainer.style.transform = `translateX(-${currentIndex * getImageWidth()}px)`;
+});
