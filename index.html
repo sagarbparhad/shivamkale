@@ -6,11 +6,67 @@
     <title>Wedding Invitation - Akshay & Shakuntala</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+    <style>
+        body {
+            padding-top: 180px;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: #fff;
+            padding-bottom: 50px;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card h1 {
+            font-size: 22px;
+            color: #e91e63;
+        }
+        .photo-gallery-inv img {
+            width: 40%;
+            height: 400px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .couple-name {
+            font-size: 20px;
+            color: #ff4081;
+        }
+        .expressive-text {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        .date, .venue, .message {
+            font-size: 16px;
+            color: #333;
+            margin: 8px 0;
+        }
+        .date {
+            font-weight: bold;
+        }
+        .venue {
+            font-weight: bold;
+        }
+        .message {
+            font-size: 14px;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
     <div class="container-class">
         <div class="container">
-            <div class="container">
+            <div class="card">
                 <h1>You're Invited to Our Special Day! Birthday Party</h1>
                 
                 <div class="photo-gallery-inv">
@@ -26,26 +82,26 @@
                 <p class="message">Join us in celebrating love, laughter, and a lifetime of happiness! We can't wait to share this beautiful moment with you. Your presence will make our day even more special. 🎊</p>
                 
             </div>
+           <div class="card">
             <div class="photo-gallery">
                 <div class="image-container">
                     <img src="IMG-20250204-WA0070.jpg" alt="Image 1">
                 </div>
-                <div class="image-container">
+                <!-- <div class="image-container">
                     <img src="IMG-20250204-WA0096.jpg" alt="Image 2">
-                </div>
+                </div> -->
                 <div class="image-container">
                     <img src="IMG20230528183737.jpg" alt="Image 3">
                 </div>
-                <div class="image-container">
+                <!-- <div class="image-container">
                     <img src="IMG-20250204-WA0107.jpg" alt="Image 4">
-                </div>
+                </div> -->
                 <div class="image-container">
                     <img src="IMG-20250204-WA0098.jpg" alt="Image 5">
                 </div>
             </div>
             <p class="image-caption">"To our little one, you bring so much happiness and love into our lives. Your smile lights up our world, and your laughter fills our hearts with joy. We are so grateful for you and the pure love you share. As you grow, may your life always be full of happiness, kindness, and love. You are our greatest gift, and we will always cherish and protect you with all our hearts."</p>
     
-            <!-- More Images Below the Invitation Card -->
             <div class="extra-photo-gallery">
                 <div class="image-container">
                     <img src="IMG-20250204-WA0094.jpg" alt="Extra Image 1">
@@ -59,28 +115,33 @@
             </div>
             <p class="image-caption-extra">"You are our everything. Every laugh, every hug, every moment with you fills our hearts with love and joy. As your mom and dad, we watch you grow with pride and wonder, knowing that each day is a new blessing. Your presence brings peace to our souls, and your happiness is our greatest joy. You are our little miracle, and we are so thankful to have you in our lives. No matter how big you grow, you will always be our baby, and our love for you will never stop."</p>
             
-            <div class="double-extra-photo-gallery">
-                <div class="image-container-extra">
-                    <img src="IMG-20250204-WA0113.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0112.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0109.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0091.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0079.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0066.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0073.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0078.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0115.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0108.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0106.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0105.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0090.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0087.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0082.jpg" alt="Extra Image 1">
-                    <img src="IMG-20250204-WA0122.jpg" alt="Extra Image 1">
+           </div>
+            <!-- More Images Below the Invitation Card -->
+            <div class="card">
+                <div class="double-extra-photo-gallery">
+                    <div class="image-container-extra">
+                        <img src="IMG-20250204-WA0113.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0112.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0109.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0091.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0079.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0066.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0073.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0078.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0115.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0108.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0106.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0105.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0090.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0087.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0082.jpg" alt="Extra Image 1">
+                        <img src="IMG-20250204-WA0122.jpg" alt="Extra Image 1">
+                    </div>
                 </div>
+                <p class="image-caption-extra">"You are the heart of our family, the little one who brings us all together with your innocent smiles, boundless energy, and pure love. Every hug, every laugh, every moment with you fills our lives with joy and meaning. You are the dream of every heart in this family—our cherished treasure, our sunshine, and the reason we believe in magic. With each passing day, you make our world more beautiful, and we are grateful for the blessing of having you in our lives."</p>
+         
             </div>
-            <p class="image-caption-extra">"You are the heart of our family, the little one who brings us all together with your innocent smiles, boundless energy, and pure love. Every hug, every laugh, every moment with you fills our lives with joy and meaning. You are the dream of every heart in this family—our cherished treasure, our sunshine, and the reason we believe in magic. With each passing day, you make our world more beautiful, and we are grateful for the blessing of having you in our lives."</p>
-        </div>
+       </div>
         <p class="image-caption-extra">Thank You!</p>
     </div>
     <script src="script.js"></script>
